@@ -1,21 +1,15 @@
 import Fastify from 'fastify'
-import cors from '@fastify/cors'
+import { setupCommonMiddlewares } from './configs/setupCommonMiddlewares'
+import { createEndpoints } from './Users/routes/createEndpoints'
 
 async function bootstrap() {
   const fastify = Fastify({
     logger: true,
   })
-  await fastify.register(cors, {
-    origin: true,
-  })
 
-  fastify.get('/users', async () => {
-    const users = [
-      { name: 'Mateus', age: 21 },
-      { name: 'Henrique', age: 21 },
-    ]
-    return { users }
-  })
+  setupCommonMiddlewares(fastify)
+  createEndpoints(fastify)
+
   await fastify.listen({ port: 4000, host: '0.0.0.0' })
 }
 
