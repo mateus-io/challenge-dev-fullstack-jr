@@ -1,8 +1,10 @@
 import Fastify from 'fastify'
 import { setupCommonMiddlewares } from './configs/setupCommonMiddlewares'
 import { createEndpoints } from './Users/routes/createEndpoints'
+import dotenv from 'dotenv'
 
 async function bootstrap() {
+  dotenv.config()
   const fastify = Fastify({
     logger: true,
   })
