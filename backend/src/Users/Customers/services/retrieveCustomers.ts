@@ -1,21 +1,13 @@
+import { ApiQueryAble } from '../../../base/Api'
 import { Customer } from '../../models/Customer'
 
-function retrieveCustomers(): Customer[] {
-  const customers: Customer[] = [
-    {
-      name: 'Mateus',
-      username: 'mateuss_ioo',
-      email: 'mateus@gmail.com',
-      id: 1,
-    },
-    {
-      name: 'Henrique',
-      username: 'henriquee_ioo',
-      email: 'henrique@gmail.com',
-      id: 2,
-    },
-  ]
-  return customers
+async function retrieveCustomers(api: ApiQueryAble): Promise<Customer[]> {
+  const { error, data } = await api.get<Customer[]>({
+    endpoint: '/users',
+  })
+  if (error) throw error
+  if (!data) throw new Error('Response Empty')
+  return data
 }
 
 export { retrieveCustomers }
