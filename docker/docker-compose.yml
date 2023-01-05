@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+  # Backend
+  backend:
+    container_name: backend
+    build:
+      context: ../backend
+      dockerfile: ./docker/Dockerfile
+    restart: always
+    ports:
+      - '4000:4000'
+
+  # Frontend
+  frontend:
+    container_name: frontend
+    depends_on:
+      - backend
+    build:
+      context: ../frontend
+      dockerfile: ./docker/Dockerfile
+    restart: always
+    ports:
+      - '4173:4173'
