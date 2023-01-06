@@ -1,9 +1,9 @@
 import { FastifyInstance } from 'fastify'
 
-import { usersRoutes } from './users'
+import { customersRoutes } from './customers/customers'
 
 function createEndpoints(fastify: FastifyInstance) {
-  usersRoutes(fastify)
+  customersRoutes(fastify)
 }
 
 export { createEndpoints }
