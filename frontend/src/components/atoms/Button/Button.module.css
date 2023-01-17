@@ -1,0 +1,56 @@
+.ButtonContained {
+  border: unset;
+  background: var(--primary-color);
+  color: var(--white-color);
+  padding: 0.5rem 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-variant-bold);
+  font-size: var(--font-size-l);
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.ButtonContained:hover {
+  opacity: 0.9;
+}
+
+.ButtonOutlined {
+  border: 1px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-variant-bold);
+  font-size: var(--font-size-l);
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.ButtonOutlined:hover {
+  opacity: 0.9;
+}
+
+.ButtonText {
+  border: unset;
+  background: var(--white-color);
+  color: var(--primary-color);
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-variant-bold);
+  font-size: var(--font-size-l);
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.ButtonText:hover {
+  opacity: 0.9;
+}
