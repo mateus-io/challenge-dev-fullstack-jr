@@ -5,16 +5,22 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "build:dev": "tsc && vite build --mode=development",
+    "build:prod": "tsc && vite build --mode=production",
     "build": "tsc && vite build",
     "preview": "vite preview --host 0.0.0.0",
     "test": "vitest",
-    "start:prod": "tsc && vite build && vite preview --host 0.0.0.0"
+    "start:dev": "tsc && vite build --mode=development && vite preview --host 0.0.0.0",
+    "start:prod": "tsc && vite build --mode=production && vite preview --host 0.0.0.0",
+    "start": "tsc && vite build && vite preview --host 0.0.0.0"
   },
   "dependencies": {
+    "axios": "^1.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/react": "^18.0.26",
