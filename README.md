@@ -1,5 +1,9 @@
 # Challenge Dev Fullstack JR
 
+## Arquitetura
+
+[![arquitetura do sistema](./architecture/diagram.png)](https://drive.google.com/file/d/11s5IWWR5qIOuEwkogqgMeXm8Zqr6ocRV/view?usp=sharing)
+
 ## Configuração de Ambiente:
 
 - <strong>1º passo</strong> - Navegue até o diretório "backend":
